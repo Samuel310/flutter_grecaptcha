@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_grecaptcha/flutter_grecaptcha.dart';
 
@@ -18,7 +20,11 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _flutterGrecaptchaPlugin.initializeRecaptchaClient(siteKey: "siteKey");
+    try {
+      _flutterGrecaptchaPlugin.initializeRecaptchaClient(siteKey: "siteKey");
+    } catch (e) {
+      log(e.toString());
+    }
   }
 
   @override
@@ -32,7 +38,13 @@ class _MyAppState extends State<MyApp> {
           children: [
             ElevatedButton(
               onPressed: () async {
-                await _flutterGrecaptchaPlugin.executeLoginAction();
+                try {
+                  String token =
+                      await _flutterGrecaptchaPlugin.executeLoginAction();
+                  log("token : $token");
+                } catch (e) {
+                  log(e.toString());
+                }
               },
               child: const Text("Login"),
             ),

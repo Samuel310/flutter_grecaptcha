@@ -23,11 +23,15 @@ abstract class FlutterGrecaptchaPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// Instantiate a client by using the [siteKey] that you created for your Android app.
+  ///
+  /// Note: You must initialize the reCAPTCHA Enterprise client only once during the lifetime of your app.
   Future<bool> initializeRecaptchaClient({required String siteKey}) {
     throw UnimplementedError(
         'initializeRecaptchaClient() has not been implemented.');
   }
 
+  /// Call this method to protect a LOGIN action.
   Future<String> executeLoginAction() {
     throw UnimplementedError('executeLoginAction() has not been implemented.');
   }

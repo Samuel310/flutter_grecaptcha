@@ -1,0 +1,4 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.samuel310.flutter_grecaptcha.flutter_grecaptcha">
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

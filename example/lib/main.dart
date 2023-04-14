@@ -21,7 +21,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     try {
-      _flutterGrecaptchaPlugin.initializeRecaptchaClient(siteKey: "siteKey");
+      _flutterGrecaptchaPlugin.initializeRecaptchaClient(
+          siteKey: "6Lf9LXklAAAAAMw3F7MxGWF5-1Dej_l-srnB_KbX");
     } catch (e) {
       log(e.toString());
     }

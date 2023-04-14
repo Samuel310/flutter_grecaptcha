@@ -20,11 +20,17 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    _initializeRecaptcha();
+  }
+
+  Future<void> _initializeRecaptcha() async {
     try {
-      _flutterGrecaptchaPlugin.initializeRecaptchaClient(
-          siteKey: "6Lf9LXklAAAAAMw3F7MxGWF5-1Dej_l-srnB_KbX");
+      bool res = await FlutterGrecaptcha().initializeRecaptchaClient(
+        siteKey: "<your-site-key>",
+      );
+      log("_initializeRecaptcha status : $res");
     } catch (e) {
-      log(e.toString());
+      log("Error in _initializeRecaptcha : ${e.toString()}");
     }
   }
 

@@ -7,7 +7,6 @@
 // https://forums.swift.org/t/swift-static-libraries-dont-copy-generated-objective-c-header/19816
 #import "flutter_grecaptcha-Swift.h"
 #endif
-#import <RecaptchaEnterprise/RecaptchaEnterprise.h>
 
 @implementation FlutterGrecaptchaPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {

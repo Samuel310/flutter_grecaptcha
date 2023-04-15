@@ -59,7 +59,7 @@ public class SwiftFlutterGrecaptchaPlugin: NSObject, FlutterPlugin {
             let (token, error) = await client.execute(
                 RecaptchaAction(action: .login))
             if let token = token {
-                result(token);
+                result(token.recaptchaToken);
             } else {
                 result(FlutterError(code: "executeLoginAction error", message: "\(error?.errorMessage ?? "NIL")", details: nil))
             }

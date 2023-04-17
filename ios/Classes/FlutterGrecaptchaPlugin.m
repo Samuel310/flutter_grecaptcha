@@ -1,4 +1,5 @@
 #import "FlutterGrecaptchaPlugin.h"
+#import <RecaptchaEnterprise/RecaptchaEnterprise.h>
 #if __has_include(<flutter_grecaptcha/flutter_grecaptcha-Swift.h>)
 #import <flutter_grecaptcha/flutter_grecaptcha-Swift.h>
 #else
